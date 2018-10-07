@@ -363,3 +363,17 @@ embed, iframe, object { max-width: 100%; }
 .gallery-caption { display: block; }
 
 nav.post-navigation { display: none; }
+
+#spill-city-splash { position: relative; display: -webkit-flex; display: -ms-flex; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; overflow: hidden; width: 100vw; height: 100vh; margin-bottom: 80px; background-color: pink; }
+
+#spill-city-splash .spill-city-splash-logo { position: relative; z-index: 1; }
+
+#spill-city-splash .spill-city-splash-logo img { max-width: 60vw; max-height: 60vh; }
+
+#spill-city-splash video { position: absolute; z-index: 0; top: 0; left: 0; min-width: 100vw; min-height: 100vh; }
+
+#spill { position: relative; top: -80px; margin: 0; }
+
+.wp-block-gallery { margin: 40px; }
+
+.wp-block-gallery .blocks-gallery-item, .wp-block-gallery .blocks-gallery-image { width: calc(50% - 20px * 2); margin: 20px; }

@@ -18,6 +18,30 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
+
+
+
+
+			<section id="spill-city-splash">
+				<div class="spill-city-splash-logo">
+					<a href="#spill">
+						<img src="/wp-content/themes/spillcity/media/spill-city-b@2x.png" alt="Spill City" />
+					</a>
+				</div>
+				<video autoplay loop muted plays-inline>
+				  <!-- <source src="https://player.vimeo.com/external/158148793.hd.mp4?s=8e8741dbee251d5c35a759718d4b0976fbf38b6f&profile_id=119&oauth2_token_id=57447761" type="video/mp4"> -->
+				  <source src="/wp-content/themes/spillcity/media/spill-city-splash.mp4" type="video/mp4" />
+				</video>
+			</section>
+			<h1 id="spill"></h1>
+
+
+
+
+
+
+
+
 		<?php
 		if ( have_posts() ) :
 
@@ -60,6 +84,11 @@ get_header();
 	    }
 
 
+			?>
+
+			<h1>Previous events:</h1>
+
+			<?php
 
 			/* Start the Loop */
 			while ( have_posts() ) :
