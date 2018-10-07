@@ -20,12 +20,12 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<!-- <div class="entry-meta"> -->
 				<?php
-				spillcity_posted_on();
-				spillcity_posted_by();
+				// spillcity_posted_on();
+				// spillcity_posted_by();
 				?>
-			</div><!-- .entry-meta -->
+			<!-- </div> --><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
@@ -54,6 +54,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php spillcity_entry_footer(); ?>
+		<?php // spillcity_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
