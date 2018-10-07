@@ -29,6 +29,38 @@ get_header();
 				<?php
 			endif;
 
+
+
+			// Function to get page ID by slug
+			function get_id_by_slug($page_slug) {
+				$page = get_page_by_path($page_slug);
+				if ($page) {
+					return $page->ID;
+				} else {
+					return null;
+				}
+			}
+
+			// Fetch page content for about
+			$page_slug = 'about';
+			$page_id = get_id_by_slug($page_slug);
+			$page = get_post($page_id);
+
+			if ( get_post_status ( $page_id ) == 'publish' ) {
+				echo apply_filters('the_content', $page->post_content);
+	    }
+
+			// Fetch page content for next event
+			$page_slug = 'next-event';
+			$page_id = get_id_by_slug($page_slug);
+			$page = get_post($page_id);
+
+			if ( get_post_status ( $page_id ) == 'publish' ) {
+				echo apply_filters('the_content', $page->post_content);
+	    }
+
+
+
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
