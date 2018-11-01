@@ -71,7 +71,20 @@ get_header();
 			$page = get_post($page_id);
 
 			if ( get_post_status ( $page_id ) == 'publish' ) {
-				echo apply_filters('the_content', $page->post_content);
+				?>
+				<section id="spill-city-about">
+					<div class="about-wrapper">
+						<div class="about-inner-wrapper">
+							<!-- <img class="spill-01" src="/wp-content/themes/spillcity/media/spill-01@2x.png" /> -->
+							<?php
+							echo apply_filters('the_content', $page->post_content);
+							?>
+						</div>
+						<div class="spill-01"></div>
+						<div class="spill-02"></div>
+					</div>
+				</section>
+				<?php
 	    }
 
 			// Fetch page content for next event
@@ -80,37 +93,50 @@ get_header();
 			$page = get_post($page_id);
 
 			if ( get_post_status ( $page_id ) == 'publish' ) {
-				echo apply_filters('the_content', $page->post_content);
+				?>
+				<section id="spill-city-next-event">
+					<h1>
+						<?php
+						echo apply_filters('the_content', $page->post_title);
+						?>
+					</h1>
+					<?php
+					echo apply_filters('the_content', $page->post_content);
+					?>
+				</section>
+				<?php
 	    }
 
 
 			?>
+			<section id="spill-city-previously">
+				<?php
 
-			<h1>Previous events:</h1>
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
 
-			<?php
+					/*
+					 * Include the Post-Type-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					 */
+					 ?>
+					 <h5>Previous events</h5>
+					 <?php
+					get_template_part( 'template-parts/content', get_post_type() );
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				endwhile;
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				the_posts_navigation();
 
-			endwhile;
+			else :
 
-			the_posts_navigation();
+				get_template_part( 'template-parts/content', 'none' );
 
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
+			endif;
+			?>
+		</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

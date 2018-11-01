@@ -107,7 +107,32 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,700');
 
+$content-width: 700px;
+$page-padding: 40px;
+
+$font-body: 'Montserrat', sans-serif;
+
+$black: rgb(0, 0, 0);
+$charcoal: rgb( 33, 33, 36);
+$off-white: rgb(251, 251, 252);
+$white: rgb(255, 255, 255);
+
+$purple-dark: rgb(121, 33, 153);
+$purple: rgb(170, 44, 216);
+$purple-pale: rgb(244, 213, 255);
+
+$pink: rgb(252, 195, 248);
+
+
+
+
+
+
+@mixin transition($property: all, $duration: 0.33s, $timing: cubic-bezier(0.19, 1, 0.22, 1)) {
+  transition: $property $duration $timing;
+}
 
 
 // Generate prefixed properties
@@ -129,7 +154,103 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 
 
-$page-padding: 40px;
+
+
+
+
+
+
+::selection {
+  background-color: $purple-pale;
+  text-shadow: none;
+  color: $charcoal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+body {
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+  background-color: $off-white;
+  background-image: url('/wp-content/themes/spillcity/media/noise-tile-150.png');
+  background-size: 100px;
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 1.9rem;
+  line-height: 1.8em;
+  color: $charcoal;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+mark {
+  padding-right: 2px;
+  padding-left: 2px;
+  background-color: $purple-pale;
+  background-image: url('/wp-content/themes/spillcity/media/spill-full-01@2x.jpg');
+  background-size: 800px;
+  background-position: center;
+  font-weight: 600;
+  text-shadow: 1px 1px 0 rgba($white, 0.33);
+}
+
+
+a {
+  color: $purple;
+  @include transition;
+
+  &:hover {
+    color: $purple-dark;
+  }
+}
+
+p a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $pink;
+    @include transition;
+  }
+
+  &:hover::after {
+    bottom: -4px;
+    background-color: $purple;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-shadow: 1px 1px 0 rgba($white, 1);
+}
+
+strong {
+  font-weight: 600;
+}
+
+
+h1 {
+  font-weight: 600;
+  font-size: 5.4rem;
+}
+
+
 
 
 
@@ -155,16 +276,14 @@ nav.post-navigation {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-  margin-bottom: $page-padding * 2;
-  background-color: pink;
+  // margin-bottom: $page-padding * 2;
+  background-color: $purple-pale;
 
   .spill-city-splash-logo {
     position: relative;
     z-index: 1;
-    // padding: $page-padding;
 
     img {
-      // max-width: 400px;
       max-width: 60vw;
       max-height: 60vh;
     }
@@ -175,8 +294,6 @@ nav.post-navigation {
     z-index: 0;
     top: 0;
     left: 0;
-    // width: 100%;
-    // height: 100%;
     min-width: 100vw;
     min-height: 100vh;
   }
@@ -192,6 +309,156 @@ nav.post-navigation {
 
 
 
+// About section
+
+#spill-city-about {
+  // background-image: url('/wp-content/themes/spillcity/media/spill-bg-01@2x.png');
+  // background-image: url('/wp-content/themes/spillcity/media/noise-tile-150.png');
+  // background-size: 100px;
+  // background-size: cover;
+  position: relative;
+  @include prefix(box-sizing, border-box);
+  padding: $page-padding * 2;
+  // border: 4px solid $purple-pale;
+  // border: 40px solid;
+  // border-image: url('/wp-content/themes/spillcity/media/noise-tile-150.png') 50 / 25px repeat;
+  // background-image: url('/wp-content/themes/spillcity/media/noise-tile-150.png');
+  // background-size: 100px;
+
+  .about-wrapper {
+    position: relative;
+    @include prefix(box-sizing, border-box);
+    margin-right: auto;
+    margin-left: auto;
+    // max-width: $content-width + $page-padding * 4 + 8px;
+    max-width: $content-width + $page-padding * 4 + 20px;
+    padding: 10px;
+    // border: 4px solid $purple-pale;
+    // border: 40px solid;
+    // border-image: url('/wp-content/themes/spillcity/media/noise-tile-150.png') 50 / 25px repeat;
+    background-image: url('/wp-content/themes/spillcity/media/spill-full-01@2x.jpg');
+    background-size: cover;
+
+
+    .about-inner-wrapper {
+
+      background-image: url('/wp-content/themes/spillcity/media/noise-tile-150.png');
+      background-size: 100px;
+
+      padding: $page-padding * 2;
+
+      > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      > p:first-of-type {
+        margin-top: 0;
+      }
+
+      > p:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .spill-01,
+    .spill-02 {
+      position: absolute;
+      background-image: url('/wp-content/themes/spillcity/media/spill-full-01@2x.jpg');
+      background-size: 800px;
+      background-attachment: fixed;
+    }
+
+    .spill-01 {
+      bottom: $page-padding * -1;
+      left: $page-padding * -3;
+      z-index: -1;
+      width: 220px;
+      height: 320px;
+    }
+
+    .spill-02 {
+      top: $page-padding;
+      right: $page-padding * -2;
+      z-index: 1;
+      width: 140px;
+      height: 210px;
+      background-position: right;
+    }
+
+
+    // img.spill-01 {
+    //   position: absolute;
+    //   bottom: 30px;
+    //   left: 0;
+    //   z-index: 0;
+    //   max-width: 320px;
+    // }
+  }
+}
+
+
+
+
+
+
+
+// Next event section
+
+#spill-city-next-event {
+  margin-top: $page-padding * 2;
+
+  h1,
+  p {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $content-width;
+  }
+}
+
+
+
+
+#spill-city-previously {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol {
+    width: 100%;
+    max-width: $content-width;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  h1 {
+    position: relative;
+    margin-bottom: $page-padding * 3;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: $page-padding * -2;
+      left: $page-padding * -2;
+      width: 100%;
+      height: 8px;
+      background-color: $purple;
+      background-image: url('/wp-content/themes/spillcity/media/spill-full-01@2x.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  }
+}
+
+
+
+
 // Content — image gallery
 .wp-block-gallery {
   margin: $page-padding;
@@ -200,5 +467,22 @@ nav.post-navigation {
   .blocks-gallery-image {
     width: calc(50% - #{$page-padding / 2} * 2);
     margin: $page-padding / 2;
+  }
+}
+
+
+
+
+
+
+.site-footer {
+  max-width: $content-width;
+  padding: ($page-padding * 4) $page-padding;
+  margin: 0 auto;
+
+  a {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
   }
 }

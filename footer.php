@@ -14,6 +14,9 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		<a href="https://www.facebook.com/spillcitybris">
+			<img src="/wp-content/themes/spillcity/media/spill-city-b@2x.png" alt="Spill City" />
+		</a>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

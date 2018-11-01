@@ -26,6 +26,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document ========================================================================== */
 /** 1. Correct the line height in all browsers. 2. Prevent adjustments of font size after orientation changes in iOS. */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,700");
 html { line-height: 1.15; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ }
 
 /* Sections ========================================================================== */
@@ -362,9 +363,33 @@ embed, iframe, object { max-width: 100%; }
 
 .gallery-caption { display: block; }
 
+::selection { background-color: #f4d5ff; text-shadow: none; color: #212124; }
+
+html { font-size: 62.5%; }
+
+body { width: 100vw; max-width: 100%; margin: 0; background-color: #fbfbfc; background-image: url("/wp-content/themes/spillcity/media/noise-tile-150.png"); background-size: 100px; font-family: "Montserrat", sans-serif; font-weight: 400; font-size: 1.9rem; line-height: 1.8em; color: #212124; -webkit-tap-highlight-color: transparent; }
+
+mark { padding-right: 2px; padding-left: 2px; background-color: #f4d5ff; background-image: url("/wp-content/themes/spillcity/media/spill-full-01@2x.jpg"); background-size: 800px; background-position: center; font-weight: 600; text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.33); }
+
+a { color: #aa2cd8; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
+
+a:hover { color: #792199; }
+
+p a { position: relative; text-decoration: none; color: inherit; }
+
+p a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 100%; height: 3px; background-color: #fcc3f8; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
+
+p a:hover::after { bottom: -4px; background-color: #aa2cd8; }
+
+h1, h2, h3, h4, h5, h6, p { text-shadow: 1px 1px 0 white; }
+
+strong { font-weight: 600; }
+
+h1 { font-weight: 600; font-size: 5.4rem; }
+
 nav.post-navigation { display: none; }
 
-#spill-city-splash { position: relative; display: -webkit-flex; display: -ms-flex; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; overflow: hidden; width: 100vw; height: 100vh; margin-bottom: 80px; background-color: pink; }
+#spill-city-splash { position: relative; display: -webkit-flex; display: -ms-flex; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; overflow: hidden; width: 100vw; height: 100vh; background-color: #f4d5ff; }
 
 #spill-city-splash .spill-city-splash-logo { position: relative; z-index: 1; }
 
@@ -374,6 +399,38 @@ nav.post-navigation { display: none; }
 
 #spill { position: relative; top: -80px; margin: 0; }
 
+#spill-city-about { position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; padding: 80px; }
+
+#spill-city-about .about-wrapper { position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; margin-right: auto; margin-left: auto; max-width: 880px; padding: 10px; background-image: url("/wp-content/themes/spillcity/media/spill-full-01@2x.jpg"); background-size: cover; }
+
+#spill-city-about .about-wrapper .about-inner-wrapper { background-image: url("/wp-content/themes/spillcity/media/noise-tile-150.png"); background-size: 100px; padding: 80px; }
+
+#spill-city-about .about-wrapper .about-inner-wrapper > * { position: relative; z-index: 1; }
+
+#spill-city-about .about-wrapper .about-inner-wrapper > p:first-of-type { margin-top: 0; }
+
+#spill-city-about .about-wrapper .about-inner-wrapper > p:last-of-type { margin-bottom: 0; }
+
+#spill-city-about .about-wrapper .spill-01, #spill-city-about .about-wrapper .spill-02 { position: absolute; background-image: url("/wp-content/themes/spillcity/media/spill-full-01@2x.jpg"); background-size: 800px; background-attachment: fixed; }
+
+#spill-city-about .about-wrapper .spill-01 { bottom: -40px; left: -120px; z-index: -1; width: 220px; height: 320px; }
+
+#spill-city-about .about-wrapper .spill-02 { top: 40px; right: -80px; z-index: 1; width: 140px; height: 210px; background-position: right; }
+
+#spill-city-next-event { margin-top: 80px; }
+
+#spill-city-next-event h1, #spill-city-next-event p { margin-right: auto; margin-left: auto; max-width: 700px; }
+
+#spill-city-previously h1, #spill-city-previously h2, #spill-city-previously h3, #spill-city-previously h4, #spill-city-previously h5, #spill-city-previously h6, #spill-city-previously p, #spill-city-previously ul, #spill-city-previously ol { width: 100%; max-width: 700px; margin-right: auto; margin-left: auto; }
+
+#spill-city-previously h1 { position: relative; margin-bottom: 120px; }
+
+#spill-city-previously h1::after { content: ''; position: absolute; bottom: -80px; left: -80px; width: 100%; height: 8px; background-color: #aa2cd8; background-image: url("/wp-content/themes/spillcity/media/spill-full-01@2x.jpg"); background-size: cover; background-position: center; background-attachment: fixed; }
+
 .wp-block-gallery { margin: 40px; }
 
 .wp-block-gallery .blocks-gallery-item, .wp-block-gallery .blocks-gallery-image { width: calc(50% - 20px * 2); margin: 20px; }
+
+.site-footer { max-width: 700px; padding: 160px 40px; margin: 0 auto; }
+
+.site-footer a { display: block; max-width: 200px; margin: 0 auto; }
