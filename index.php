@@ -95,6 +95,7 @@ get_header();
 			if ( get_post_status ( $page_id ) == 'publish' ) {
 				?>
 				<section id="spill-city-next-event">
+					<h5>Upcoming events</h5>
 					<h1>
 						<?php
 						echo apply_filters('the_content', $page->post_title);
