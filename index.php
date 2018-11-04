@@ -20,8 +20,6 @@ get_header();
 
 
 
-
-
 			<section id="spill-city-splash">
 				<div class="spill-city-splash-logo">
 					<a href="#spill">
@@ -29,16 +27,10 @@ get_header();
 					</a>
 				</div>
 				<video autoplay loop muted plays-inline>
-				  <!-- <source src="https://player.vimeo.com/external/158148793.hd.mp4?s=8e8741dbee251d5c35a759718d4b0976fbf38b6f&profile_id=119&oauth2_token_id=57447761" type="video/mp4"> -->
 				  <source src="/wp-content/themes/spillcity/media/spill-city-splash.mp4" type="video/mp4" />
 				</video>
 			</section>
 			<h1 id="spill"></h1>
-
-
-
-
-
 
 
 
@@ -75,7 +67,6 @@ get_header();
 				<section id="spill-city-about">
 					<div class="about-wrapper">
 						<div class="about-inner-wrapper">
-							<!-- <img class="spill-01" src="/wp-content/themes/spillcity/media/spill-01@2x.png" /> -->
 							<?php
 							echo apply_filters('the_content', $page->post_content);
 							?>
