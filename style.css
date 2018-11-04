@@ -395,7 +395,7 @@ h1 p { margin: 0; }
 
 nav.post-navigation { display: none; }
 
-#spill-city-splash { position: relative; display: -webkit-flex; display: -ms-flex; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; overflow: hidden; width: 100vw; height: 100vh; background-color: #f4d5ff; }
+#spill-city-splash { position: relative; display: -webkit-flex; display: -ms-flex; display: flex; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; overflow: hidden; width: 100vw; height: 100vh; background-color: #f4d5ff; background-image: url("/wp-content/themes/spillcity/media/spill-full-01@2x.jpg"); background-size: cover; }
 
 #spill-city-splash .spill-city-splash-logo { position: relative; z-index: 1; }
 
