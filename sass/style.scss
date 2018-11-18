@@ -328,9 +328,7 @@ nav.post-navigation {
   overflow: hidden;
 
   @media (max-width: $mobile-screen) {
-    padding-right: 0;
-    padding-bottom: $page-padding;
-    padding-left: 0;
+    padding: $page-padding 0;
   }
 
   .about-wrapper {
@@ -362,7 +360,8 @@ nav.post-navigation {
       }
 
       @media (max-width: $mobile-screen) {
-        padding: $page-padding / 2;
+        // padding: $page-padding / 2;
+        padding: 0;
       }
 
       > * {
@@ -380,7 +379,8 @@ nav.post-navigation {
     }
 
     .spill-01,
-    .spill-02 {
+    .spill-02,
+    .spill-03 {
       position: absolute;
       background-image: url('/wp-content/themes/spillcity/media/spill-full-01@2x.jpg');
       background-size: 800px;
@@ -394,11 +394,15 @@ nav.post-navigation {
       width: 220px;
       height: 320px;
 
+      // @media (max-width: $mobile-screen) {
+      //   right: 0;
+      //   bottom: $page-padding / 2;
+      //   left: auto;
+      //   height: 50%;
+      // }
+
       @media (max-width: $mobile-screen) {
-        right: 0;
-        bottom: $page-padding / 2;
-        left: auto;
-        height: 50%;
+        display: none;
       }
     }
 
@@ -414,12 +418,33 @@ nav.post-navigation {
         right: $page-padding * -2.5;
       }
 
+      // @media (max-width: $mobile-screen) {
+      //   z-index: -1;
+      //   top: $page-padding / 2;
+      //   right: auto;
+      //   left: 0;
+      //   height: 50%;
+      // }
+
       @media (max-width: $mobile-screen) {
-        z-index: -1;
-        top: $page-padding / 2;
-        right: auto;
-        left: 0;
-        height: 50%;
+        display: none;
+      }
+    }
+
+    .spill-03 {
+      bottom: $page-padding * -2;
+      right: $page-padding;
+      z-index: 1;
+      width: 210px;
+      height: 130px;
+      background-position: right;
+
+      @media (max-width: $small-screen) {
+        display: none;
+      }
+
+      @media (max-width: $mobile-screen) {
+        display: none;
       }
     }
 

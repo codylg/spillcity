@@ -407,7 +407,7 @@ nav.post-navigation { display: none; }
 
 #spill-city-about { position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; padding: 80px 40px; overflow: hidden; }
 
-@media (max-width: 500px) { #spill-city-about { padding-right: 0; padding-bottom: 40px; padding-left: 0; } }
+@media (max-width: 500px) { #spill-city-about { padding: 40px 0; } }
 
 #spill-city-about .about-wrapper { position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; margin-right: auto; margin-left: auto; max-width: 880px; padding: 10px; background-image: url("/wp-content/themes/spillcity/media/spill-full-01@2x.jpg"); background-size: cover; }
 
@@ -419,7 +419,7 @@ nav.post-navigation { display: none; }
 
 @media (max-width: 720px) { #spill-city-about .about-wrapper .about-inner-wrapper { padding: 40px; } }
 
-@media (max-width: 500px) { #spill-city-about .about-wrapper .about-inner-wrapper { padding: 20px; } }
+@media (max-width: 500px) { #spill-city-about .about-wrapper .about-inner-wrapper { padding: 0; } }
 
 #spill-city-about .about-wrapper .about-inner-wrapper > * { position: relative; z-index: 1; }
 
@@ -427,17 +427,23 @@ nav.post-navigation { display: none; }
 
 #spill-city-about .about-wrapper .about-inner-wrapper > p:last-of-type { margin-bottom: 0; }
 
-#spill-city-about .about-wrapper .spill-01, #spill-city-about .about-wrapper .spill-02 { position: absolute; background-image: url("/wp-content/themes/spillcity/media/spill-full-01@2x.jpg"); background-size: 800px; background-attachment: fixed; }
+#spill-city-about .about-wrapper .spill-01, #spill-city-about .about-wrapper .spill-02, #spill-city-about .about-wrapper .spill-03 { position: absolute; background-image: url("/wp-content/themes/spillcity/media/spill-full-01@2x.jpg"); background-size: 800px; background-attachment: fixed; }
 
 #spill-city-about .about-wrapper .spill-01 { bottom: -40px; left: -120px; z-index: -1; width: 220px; height: 320px; }
 
-@media (max-width: 500px) { #spill-city-about .about-wrapper .spill-01 { right: 0; bottom: 20px; left: auto; height: 50%; } }
+@media (max-width: 500px) { #spill-city-about .about-wrapper .spill-01 { display: none; } }
 
 #spill-city-about .about-wrapper .spill-02 { top: 40px; right: -80px; z-index: 1; width: 140px; height: 210px; background-position: right; }
 
 @media (max-width: 720px) { #spill-city-about .about-wrapper .spill-02 { right: -100px; } }
 
-@media (max-width: 500px) { #spill-city-about .about-wrapper .spill-02 { z-index: -1; top: 20px; right: auto; left: 0; height: 50%; } }
+@media (max-width: 500px) { #spill-city-about .about-wrapper .spill-02 { display: none; } }
+
+#spill-city-about .about-wrapper .spill-03 { bottom: -80px; right: 40px; z-index: 1; width: 210px; height: 130px; background-position: right; }
+
+@media (max-width: 720px) { #spill-city-about .about-wrapper .spill-03 { display: none; } }
+
+@media (max-width: 500px) { #spill-city-about .about-wrapper .spill-03 { display: none; } }
 
 #spill-city-about .about-wrapper figure.wp-block-embed-youtube { margin: 40px 0; }
 
