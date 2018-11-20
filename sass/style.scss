@@ -409,7 +409,7 @@ nav.post-navigation {
     }
 
     .spill-02 {
-      top: $page-padding;
+      top: $page-padding * 2;
       right: $page-padding * -2;
       z-index: 1;
       width: 140px;
