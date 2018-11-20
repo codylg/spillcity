@@ -439,7 +439,7 @@ nav.post-navigation { display: none; }
 
 @media (max-width: 500px) { #spill-city-about .about-wrapper .spill-02 { display: none; } }
 
-#spill-city-about .about-wrapper .spill-03 { bottom: -80px; right: 40px; z-index: 1; width: 210px; height: 130px; }
+#spill-city-about .about-wrapper .spill-03 { bottom: -80px; right: 0; z-index: 1; width: 210px; height: 130px; }
 
 @media (max-width: 720px) { #spill-city-about .about-wrapper .spill-03 { display: none; } }
 
