@@ -223,6 +223,7 @@ p a {
     background-image: url('/wp-content/themes/spillcity/media/spill-full-01@2x.jpg');
     background-size: 400px;
     background-position: center;
+    background-attachment: fixed;
     @include transition;
   }
 
@@ -339,7 +340,8 @@ nav.post-navigation {
     max-width: $content-width + $page-padding * 4 + 20px;
     padding: 10px;
     background-image: url('/wp-content/themes/spillcity/media/spill-full-01@2x.jpg');
-    background-size: cover;
+    background-size: 800px;
+    background-attachment: fixed;
 
     @media (max-width: $small-screen) {
       padding: 8px;
@@ -412,7 +414,7 @@ nav.post-navigation {
       z-index: 1;
       width: 140px;
       height: 210px;
-      background-position: right;
+      // background-position: right;
 
       @media (max-width: $small-screen) {
         right: $page-padding * -2.5;
@@ -437,7 +439,7 @@ nav.post-navigation {
       z-index: 1;
       width: 210px;
       height: 130px;
-      background-position: right;
+      // background-position: right;
 
       @media (max-width: $small-screen) {
         display: none;
