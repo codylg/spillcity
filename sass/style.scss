@@ -109,6 +109,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600|Muli:400,400i,700');
 
+$medium-screen: 1100px;
 $small-screen: 720px;
 $mobile-screen: 500px;
 
@@ -615,11 +616,21 @@ nav.post-navigation {
   position: relative;
   @include flex;
   max-width: $content-width * 2;
-  padding: ($page-padding * 2) 0;
+  padding: $page-padding * 2;
   margin: 0 auto;
 
+  @media (max-width: $medium-screen) {
+    padding-right: $page-padding;
+    padding-left: $page-padding;
+  }
+
+  @media (max-width: $small-screen) {
+    @include prefix(flex-direction, column);
+  }
+
   @media (max-width: $mobile-screen) {
-    // padding-top: $page-padding * 2;
+    padding-right: $page-padding / 2;
+    padding-left: $page-padding / 2;
   }
 
   &::before {
@@ -635,16 +646,24 @@ nav.post-navigation {
   }
 
   > div {
-    @include prefix(flex-basis, 33.33%);
-    @include prefix(flex-grow, 0);
+    @include prefix(flex-grow, 1);
+    @include prefix(flex-shrink, 1);
     max-width: 33.33%;
     padding-top: $page-padding * 2;
-    padding-right: $page-padding;
-    padding-left: $page-padding;
+
+    @media (max-width: $small-screen) {
+      max-width: none;
+      text-align: center;
+    }
   }
 
   .colophon {
-    @include prefix(flex-grow, 1);
+    min-width: 320px;
+
+    @media (max-width: $small-screen) {
+      min-width: 0;
+      font-size: 1.6rem;
+    }
 
     p:first-child {
       margin-top: 0;
@@ -653,25 +672,35 @@ nav.post-navigation {
   }
 
   .spill-logo {
-    max-width: 200px;
-    margin: 0 auto;
+    padding-right: $page-padding;
+    padding-left: $page-padding;
+    text-align: center;
+
+    img {
+      max-width: 175px;
+    }
   }
 
   .logos {
     text-align: right;
+
+    @media (max-width: $small-screen) {
+      text-align: center;
+    }
 
     a {
       text-decoration: none;
     }
 
     img {
-      max-width: 80px;
+      max-width: 70px;
+      margin-bottom: 30px;
     }
 
     a + a,
     a + img,
     img + a {
-      margin-left: 40px;
+      margin-left: 30px;
     }
   }
 
