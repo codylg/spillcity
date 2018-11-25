@@ -463,6 +463,22 @@ nav.post-navigation { display: none; }
 
 @media (max-width: 500px) { #spill-city-next-event img { margin-top: 40px; margin-bottom: 40px; } }
 
+#spill-city-next-event .event-buttons { margin-top: 40px; margin-bottom: 40px; }
+
+#spill-city-next-event .event-buttons .event-button { position: relative; top: 0; left: 0; padding: 14px 18px; background-color: white; font-weight: 700; font-size: 1.6rem; line-height: 1em; color: #212124; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }
+
+@media (max-width: 500px) { #spill-city-next-event .event-buttons .event-button { display: block; width: 100%; text-align: center; } }
+
+#spill-city-next-event .event-buttons .event-button::after { z-index: -1; bottom: -6px; left: 6px; height: 100%; }
+
+#spill-city-next-event .event-buttons .event-button:hover { top: -2px; left: -2px; }
+
+#spill-city-next-event .event-buttons .event-button:hover::after { bottom: -10px; left: 10px; }
+
+#spill-city-next-event .event-buttons .event-button + .event-button { margin-left: 25px; }
+
+@media (max-width: 500px) { #spill-city-next-event .event-buttons .event-button + .event-button { margin-top: 25px; margin-left: 0; } }
+
 #spill-city-previously { padding-top: 80px; }
 
 #spill-city-previously article + h5 { margin-top: 240px; }

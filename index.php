@@ -87,12 +87,29 @@ get_header();
 			if ( get_post_status ( $page_id ) == 'publish' ) {
 				?>
 				<section id="spill-city-next-event">
-					<h5>Upcoming events</h5>
+					<h5>
+						Upcoming event —
+						<?php if ( get_post_meta($page_id, 'event-date', true) ) {
+							echo get_post_meta($page_id, 'event-date', true);
+						} ?>
+					</h5>
 					<h1>
 						<?php
 						echo apply_filters('the_content', $page->post_title);
 						?>
 					</h1>
+					<p class="event-buttons">
+						<?php if ( get_post_meta($page_id, 'event-link', true) ) { ?>
+						<a class="event-button event-link" href="<?php echo get_post_meta($page_id, 'event-link', true); ?>">
+							View event &rarr;
+						</a>
+						<?php } ?>
+						<?php if ( get_post_meta($page_id, 'ticket-link', true) ) { ?>
+						<a class="event-button ticket-link" href="<?php echo get_post_meta($page_id, 'ticket-link', true); ?>">
+							Get tickets &rarr;
+						</a>
+						<?php } ?>
+					</p>
 					<?php
 					echo apply_filters('the_content', $page->post_content);
 					?>

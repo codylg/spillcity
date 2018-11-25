@@ -503,6 +503,56 @@ nav.post-navigation {
       margin-bottom: $page-padding;
     }
   }
+
+  .event-buttons {
+    margin-top: $page-padding;
+    margin-bottom: $page-padding;
+
+    .event-button {
+      position: relative;
+      top: 0;
+      left: 0;
+      padding: 14px 18px;
+      background-color: $white;
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 1em;
+      color: $charcoal;
+      @include transition;
+
+      @media (max-width: $mobile-screen) {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      &::after {
+        z-index: -1;
+        bottom: -6px;
+        left: 6px;
+        height: 100%;
+      }
+
+      &:hover {
+        top: -2px;
+        left: -2px;
+
+        &::after {
+          bottom: -10px;
+          left: 10px;
+        }
+      }
+
+      + .event-button {
+        margin-left: 25px;
+
+        @media (max-width: $mobile-screen) {
+          margin-top: 25px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
 }
 
 
