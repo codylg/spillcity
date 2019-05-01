@@ -515,9 +515,11 @@ nav.post-navigation { display: none; }
 
 #spill-city-event-page .event-buttons { margin-top: -30px; margin-bottom: 80px; }
 
-#spill-city-event-page h1, #spill-city-event-page h2, #spill-city-event-page h3, #spill-city-event-page h4, #spill-city-event-page h5, #spill-city-event-page h6, #spill-city-event-page p, #spill-city-event-page ul, #spill-city-event-page ol { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; width: 100%; max-width: 780px; padding: 0 40px; margin-right: auto; margin-left: auto; }
+#spill-city-event-page h1, #spill-city-event-page h2, #spill-city-event-page h3, #spill-city-event-page h4, #spill-city-event-page h5, #spill-city-event-page h6, #spill-city-event-page p, #spill-city-event-page ul, #spill-city-event-page ol, #spill-city-event-page figure { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; width: 100%; max-width: 780px; padding: 0 40px; margin-right: auto; margin-left: auto; }
 
-@media (max-width: 500px) { #spill-city-event-page h1, #spill-city-event-page h2, #spill-city-event-page h3, #spill-city-event-page h4, #spill-city-event-page h5, #spill-city-event-page h6, #spill-city-event-page p, #spill-city-event-page ul, #spill-city-event-page ol { padding: 0 20px; } }
+#spill-city-event-page h1.wp-block-embed-youtube, #spill-city-event-page h2.wp-block-embed-youtube, #spill-city-event-page h3.wp-block-embed-youtube, #spill-city-event-page h4.wp-block-embed-youtube, #spill-city-event-page h5.wp-block-embed-youtube, #spill-city-event-page h6.wp-block-embed-youtube, #spill-city-event-page p.wp-block-embed-youtube, #spill-city-event-page ul.wp-block-embed-youtube, #spill-city-event-page ol.wp-block-embed-youtube, #spill-city-event-page figure.wp-block-embed-youtube { max-width: 640px; }
+
+@media (max-width: 500px) { #spill-city-event-page h1, #spill-city-event-page h2, #spill-city-event-page h3, #spill-city-event-page h4, #spill-city-event-page h5, #spill-city-event-page h6, #spill-city-event-page p, #spill-city-event-page ul, #spill-city-event-page ol, #spill-city-event-page figure { padding: 0 20px; } }
 
 #spill-city-event-page h1 { position: relative; margin-bottom: 120px; }
 

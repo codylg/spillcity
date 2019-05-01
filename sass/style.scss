@@ -665,13 +665,18 @@ nav.post-navigation {
   h6,
   p,
   ul,
-  ol {
+  ol,
+  figure {
     @include prefix(box-sizing, border-box);
     width: 100%;
     max-width: $content-width + $page-padding * 2;
     padding: 0 $page-padding;
     margin-right: auto;
     margin-left: auto;
+
+    &.wp-block-embed-youtube {
+      max-width: 640px;
+    }
 
     @media (max-width: $mobile-screen) {
       padding: 0 ($page-padding / 2);
