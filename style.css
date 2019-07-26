@@ -463,6 +463,8 @@ nav.post-navigation { display: none; }
 
 @media (max-width: 500px) { #spill-city-next-event img { margin-top: 40px; margin-bottom: 40px; } }
 
+#spill-city-next-event img.wp-post-image { max-width: 780px; }
+
 .event-buttons { margin-top: 40px; margin-bottom: 40px; }
 
 .event-button { position: relative; top: 0; left: 0; padding: 14px 18px; background-color: white; font-weight: 700; font-size: 1.6rem; line-height: 1em; color: #212124; transition: all 0.33s cubic-bezier(0.19, 1, 0.22, 1); }

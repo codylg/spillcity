@@ -502,6 +502,10 @@ nav.post-navigation {
       margin-top: $page-padding;
       margin-bottom: $page-padding;
     }
+
+    &.wp-post-image {
+      max-width: $content-width + $page-padding * 2;
+    }
   }
 }
 

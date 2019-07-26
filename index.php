@@ -113,6 +113,7 @@ get_header();
 					<?php
 					echo apply_filters('the_content', $page->post_content);
 					?>
+					<?php echo get_the_post_thumbnail($page_id); ?>
 				</section>
 				<?php
 	    }
